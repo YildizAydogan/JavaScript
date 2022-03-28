@@ -23,6 +23,9 @@
     </div>
 
 
+    <h1 class="name">Ali GEl</h1>
+    <p class="mesaj">...</p>
+
 
     <script>
         let cont = document.querySelector(".container");
@@ -39,6 +42,10 @@
 
         cont = document.querySelectorAll(".d-none");
         console.log(cont);
+
+
+        let isim = document.querySelector(".name").innerText;
+        document.querySelector(".mesaj").innerHTML = `Merhaba <b>${isim}</b>`;
 
     </script>
 
