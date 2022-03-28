@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<table border="1"  width="500">
+    <thread>
+        <th>Urun Adi</th>
+        <th>Urun Adet</th>
+        <th>Urun Fiyat</th>
+        <th>Urun Toplam Fiyat</th>
+    </thread>
+    <tbody>
+        <tr>
+            <td id="urunAdi1"></td>
+            <td id="urunAdet1"></td>
+            <td id="urunFiyat1"></td>
+            <td id="urunToplamFiyat1"></td>
+        </tr>
+
+        <tr>
+            <td id="urunAdi2"></td>
+            <td id="urunAdet2"></td>
+            <td id="urunFiyat2"></td>
+            <td id="urunToplamFiyat2"></td>
+        </tr>
+
+<tr>
+    <td colspan="4" id="orderTotalPrice"></td>
+</tr>
+
+
+
+
+
+
+
+
+    </tbody>
+</table>
+   <script>
+
+
+
+
+/*Coklu yyorum acma
+//buda tekli yorum icin kullanilir js de 
+*/
+// console.log("Konsol kullanimi");  //String
+// console.log(187);  //Number //integer
+// console.log(187,5); //Number // float
+// console.log("187");  //String
+// console.log(true); //Boolean
+// console.log(false); //Boolean
+// console.log([1,2,3,4,5]); //Dizi gösterimi
+// console.warn("Uyari vermek istedigimizde");
+// console.error("Hata olustugunda yada hata görünümünde");
+
+// console.clear();  // Konsol temizleme
+
+// Biz butun bunlari kodun icine girmeden console da yani google web consolda anlik degisikler yapabiliriz
+
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+//DEGISKENLER
+//Degiskenler bir veri türüdür
+
+//var ad="Sercan";
+//console.log(ad);
+
+
+/*Degiskenler nasil tanimlanmali?
+
+* degisken tanimlarken sayisal bir degerle baslanmaz ama bitebilir( var 1sayi=25;  XXXXX )
+
+* degisken olustururken _ cizgi kullanilabilir. _ ile tanimlanan degiskenler GECICI degiskenler olarak adlandirilir.( var _sayi=25; )
+
+* JS de dahili komutlar camelCaSE Kurallar ile yazilir. Yani metinsel degiskenler, fonksiyon islemleri gibi alanlar
+ birden fazla kelimeden olusuyorsa ilk kelime kucuk harfle baslar ve diger kelimeler buyuk harfle baslar ( var fullName; )
+SnakeCase => full_name seklinde yazim
+KebabCase => full-name seklinde yazim
+
+*Hungarian Notation (var iToplam;) i harfi integer tamsayi deger tutuldugunu ifade eder.
+                    (var sName;  ) s harfi String bir deger tutuldugunu ifade eder. 
+
+*/
+
+/*var fullName;
+console.log(fullName);  //undefined
+
+var universtyName= "Ankara Universty"; //Ankara Universty yazar
+console.log(universtyName);
+universtyName="THI"; // guncellendi
+console.log(universtyName);   */
+
+
+
+
+//---------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+/*degisken türleri arasindaki farklar... var-let- const degisken tanimlamanin farki nedir?
+
+*let ile olusturulan bir degiskene sadece olusturuldugu suslu parantezler arasindan erisilir.
+Buna BLOCK SCOPE ozelligi denir
+*let ile tanimlanan bir degiskeni tekrar tanimlayamayiz.
+*let ile tanimlanan bir degiskenin degerini güncelleyebiliriz
+let name="Ali"; 
+// let name="lina";   00-selbst.html:72 Uncaught SyntaxError: Identifier 'name' has already been declare hatasi verdi
+//ama guncelleyebilirim
+name="ayse";
+console.log(name);
+*/
+
+
+
+
+//-----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+/*
+var ise erisilebilir durumdadir
+Bu oyelligine FUNCTION SCOPE denir:
+Var ile tanimlarnan bir degiskeni tekrar tekrar tanimlayabilir ve guncelleyebiliriz
+
+var fullName="Ali";
+fullName="Hakan";
+console.log(fullName);
+*/
+
+
+// function blockScopeKullanimi(){
+// /*    let deger;
+
+// for(let i = 0; i <3; i++){
+//      deger=i;
+// }
+// console.log(deger); // console da 2 yazdirdi ama deger yerine i yazildiginda hata verdi cunku scope u farkli 
+
+// */
+
+// var deger;
+// for(var i = 0; i <3; i++){
+//    var  deger=i; // (basina var yazdigimda altini cizdi cunku daha once let ile tanimlanmisti)
+// }
+// console.log(deger);
+// }
+
+// blockScopeKullanimi();
+
+//----------------------------------------
+
+// let test;
+
+// function test1(){test="Egitim1";}
+// function test2(){test="Egitim2";}
+// test1();
+// test2(); //en son calisani calistirir
+// console.log(test);
+
+//----------------------------------------
+
+
+//const= sabit degisken olusturmak icin kullaniyoruz. Sabit tanimlama. Ne guncellenir ne degisir
+//BLOCK SCOPE dur
+
+// const firstName; bunu yazarken altini cizdi cunku once atama snra deger atamam yapmaz ilkte hersey acik olmali
+ //const firstName="Sercan";
+//  firstName="Ali"; Uncaught TypeError: Assignment to constant variable. hata verdiiii
+ //console.log(firstName);
+
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+// - Değişken Tipleri ve Değişken Tipini Kontrol Etme
+// - Primitive(Sifat) Types 
+// - Reference Types / Objects Types  => Objects olarakta kaynaklarda görülebililir
+
+
+
+//Primitive(Sifat) Types 
+
+// const lastName="Ali";
+// console.log(typeof lastName);
+
+// const age=29;
+// console.log(typeof age);
+
+
+// var price=29.5;
+// console.log(typeof price);
+
+// let isAdmin=true;
+// console.log(typeof isAdmin);
+
+
+// var ad;
+// console.log(typeof ad);//undefined
+
+// let name;
+// console.log(typeof name); //undefined
+
+
+//--------------------------------------------------
+
+// - Reference Types / Objects Types
+
+//Object -Nesne Tanimlama
+
+
+
+
+//------------------------------------------------
+// Tarih Tanimlama
+// var date=new Date();
+// console.log(date); // Mon Mar 28 2022 15:42:32 GMT+0200 (Orta Avrupa Yaz Saati)
+// console.log(typeof date); //object
+//------------------------------------------------
+//Function Tanimlama
+// var funktion=function(){return 1+2;}
+
+// console.log(typeof funktion); // function
+// console.log(funktion());  // 3
+ 
+
+
+
+
+
+//---------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+// - Tür Dönüştürme İşlemleri 
+
+//alert(15); //Server da actigimda ekranda ilk alert uyarisini görurum 
+ //simdi de bir sayi giriniz uyarisi olusturalim
+
+// var sayi1  =prompt("Sayi 1 Giriniz!");
+// var sayi2  =prompt("Sayi 2 Giriniz!");
+// var toplam= sayi1 + sayi2; //burda yan yana string seklinde islem yapti
+// alert(toplam);
+// console.log(sayi1); //bu sekilde serverda girdigimiz sayiyi yazdirmis olacagiz
+
+
+
+// - - - String To Number
+// sayi1=Number(sayi1);
+// sayi2=Number(sayi2);
+// var toplam=sayi1 + sayi2;
+// alert(toplam);
+// console.log("Toplam= " + toplam);
+
+
+
+// - - - Boolean To Number
+// var isAdmin=false;
+// console.log(isAdmin); //false yazdirdi
+// isAdmin=Number(isAdmin);
+// console.log(isAdmin);  //false degeri numbera cevrildikten sonra aldigi deger = 0  dir
+
+// isAdmin=true;
+// console.log(isAdmin); //true yazdirdi
+// isAdmin=Number(isAdmin); 
+// console.log(isAdmin);// true degeri ise =1 yazdirdi
+
+
+
+// - - - Number To String
+// var result =15;
+// console.log(result);
+// console.log(String(result));
+
+// var result =String(15);  //burda da ayni sekilde donusturme yapilmis oldu
+// console.log(result);
+
+
+
+// - - - Date to String
+// var date=new Date();
+// console.log(date);  //Mon Mar 28 2022 17:11:49 GMT+0200 (Orta Avrupa Yaz Saati)
+// var month=date.getMonth();
+// console.log(month);  //2 bunun typei number console da mavi yazdi
+// console.log(String(month)); //String olarak 2 yazdi rengi siyahti
+
+
+
+
+// - - - To String ile Stringe dönusturme Kullanımı
+// var sayi=25;
+// console.log(typeof sayi); //
+// sayi= sayi.toString();
+// console.log(typeof sayi); //string
+
+
+
+
+// - - - parseInt Kullanım
+// var sayi="25";
+// console.log(typeof sayi);//string
+// sayi=parseInt(sayi);
+// console.log(typeof sayi);  //number
+
+
+
+
+
+// - - - parseFloat Kullanımı
+//yani tam sayilara cevirme islemi yapilacak
+// var rasyonel="7.6";
+// // console.log(rasyonel); // 7.6
+// // rasyonel=parseInt(rasyonel);
+// // console.log(rasyonel); // 7 burda da inte dondu
+// rasyonel=parseFloat(rasyonel)
+// console.log(rasyonel); //7.6 a geri dondu. Stringden floata donustu
+
+// Merhaba parseInt() ve  Number() fonksiyonları arasında  ufak farkı var
+
+// Mesela eğere değişkenimizi var  deneme='kelimelerrakamlar252' gibi tanımlarsak
+// Number(deneme)  fonksiyonu hata vericek  
+// fakat parseInt() fonksiyonu değişkenin   içerisinden sadece rakamları seçiçek 
+// parseİnt(deneme)= '252';
+//  Not: parse->tahlil demek
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+  <script src="assets/js/00-selbst.js"></script>
+</body>
+</html>
