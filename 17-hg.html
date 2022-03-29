@@ -1,45 +1,73 @@
-<!Doctype html>
-<html>
-<style>
-.btn-group button {
-  background-color: #04AA6D; /* Green background */
-  border: 1px solid green; /* Green border */
-  color: white; /* White text */
-  padding: 10px 24px; /* Some padding */
-  cursor: pointer; /* Pointer/hand icon */
-  float: left; /* Float the buttons side by side */
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+body {
+  cursor: pointer;
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+  }
+  
+  .dark-mode {
+    background-color: brown;
+    color: black;
+  }
+  
+.light-mode {
+background-color: gainsboro;
+color: yellow;
 
-/* Clear floats (clearfix hack) */
-.btn-group:after {
-  content: "";
-  clear: both;
-  display: table;
-}
 
-.btn-group button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
 }
-
-/* Add a background color on hover */
-.btn-group button:hover {
-  background-color: #3e8e41;
-}
-</style>
+  </style>
+</head>
 <body>
-
-<h1>Button Group</h1>
-
-<div class="btn-group">
-  <button onclick="myFunction()"></button>
-  <button onclick="myFunction()">Dark Mode</button>
-  <button onclick="myFunction()">Light Mode</button>
-</div>
+  <table class="T" border="1"  width="700">
+    <tr>
+      <th></th>
+      <th id="D" onclick="DarkMode()">Light Mode</th>
+      <th id="L" onclick="lightMode()">Dark Mode</th>
+    </tr>
+    <tr>
+      <td>Page background color</td>
+      <td>black</td>
+      <td>white</td>
+    </tr>
+    <tr>
+      <td>Page text color</td>
+      <td>white</td>
+      <td>Black</td>
+    </tr>
+    <tr>
+      <td>Button background color</td>
+      <td>white</td>
+      <td>Black</td>
+    </tr>
+    <tr>
+      <td>Button text color</td>
+      <td>black</td>
+      <td>White</td>
+    </tr>
+  </table>
 <script>
-    function myFunction() {
-       var element = document.btn-group;
-       element.classList.toggle("dark-mode");
-    }
-    </script>
+function DarkMode() {
+    var element = document.querySelector(".T");
+    element.classList.toggle("dark-mode");
+    document.getElementById("D").innerHTML = "Dark Mode";
+  }
+  
+  function lightMode() {
+    var element = document.querySelector(".T");
+    element.classList.toggle("light-mode");
+    document.getElementById("L").innerHTML = "Light Mode";
+  }
+
+</script>
 </body>
 </html>
