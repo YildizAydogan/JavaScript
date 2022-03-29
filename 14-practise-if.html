@@ -9,28 +9,19 @@
 <body>
     <input type="number" name="" id="txtFiyat">
     <button id="btnHesapla" onclick="hesapla()">Hesapla</button>
-    <div id="lblsonuc"></div>
 
-<script>
+    <div id="lblSonuc"></div>
 
-function hesapla(){
+    <script>
+        function hesapla(){
+            let fiyat = document.querySelector("#txtFiyat").value;
 
-let fiyat=document.querySelector("#txtFiyat").value;
-if(fiyat>500){
-    fiyat=fiyat-(fiyat*10/100);
-}
-document.querySelector("#lblsonuc").innerText=fiyat;
-}
+            if(fiyat>500){
+                fiyat =  fiyat - fiyat*10/100;
+            }
 
-
-
-
-</script>
-
-
-
-
-
-
+            document.querySelector("#lblSonuc").innerText = fiyat;
+        }
+    </script>
 </body>
 </html>
