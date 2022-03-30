@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Asal Sayi Kontrol</h2>
+	<input placeholder="Lütfen bir Sayi Giriniz!" type="text" id="txtSayi">
+	<button id="btn">HESAPLA</button>
+	<div id="sonuc"></div>
+	
+	<script>
+		function Hesapla()
+		{
+			var text="";
+			var sayac=0;
+			var sayi=Number(document.getElementById("txtSayi").value);
+			
+			for(i=2; i<sayi; i++)
+			 {
+				if(sayi%i==0)
+				{
+				sayac++;
+				}
+			 }
+				if(sayac==0)
+				{
+				text="Girdiginiz sayi Asal bir sayidir:)";
+				}
+				else
+				{
+				text="Girdiginiz sayi Asal bir sayi değildir.<br/> 1 ve Kendisi hariç <strong>"+sayac+"</strong> adet böleni var";
+				}
+ 
+			document.getElementById("sonuc").innerHTML=text;
+		}
+		
+		var hesapBtn=document.getElementById("btn");
+		hesapBtn.onclick=Hesapla;
+		
+	</script>
+	
+</body>
+</html>

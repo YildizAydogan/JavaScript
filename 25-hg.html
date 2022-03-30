@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <b>Sayi 1:</b> <input  type="text"  id="sayi1" ></br>
+    <b>Sayi 2:</b> <input  type="text"  id="sayi2" ></br></br>
+
+<input type="button"  value="+" onclick="topla()">
+<input type="button" value="-" onclick=" cikar()">
+<input type="button" value="*" onclick="carp()">
+<input type="button" value="/" onclick="bol()">
+</br></br>
+
+    <b>Sonuc:</b> <input  type="text"  id="sonuc" >
+
+    <script >
+        function   topla()
+        {
+        s1=document.getElementById("sayi1").value;
+        s2=document.getElementById("sayi2").value;
+        sonuc.value=parseInt(s1)+parseInt(s2);
+      
+        }
+        function   cikar()
+        {
+        s1=document.getElementById("sayi1").value;
+        s2=document.getElementById("sayi2").value;
+        sonuc.value=parseInt(s1)-parseInt(s2);
+        }
+        function   carp()
+        {
+        s1=document.getElementById("sayi1").value;
+        s2=document.getElementById("sayi2").value;
+        sonuc.value=parseInt(s1)*parseInt(s2);
+        }
+        function   bol()
+        {
+        s1=document.getElementById("sayi1").value;
+        s2=document.getElementById("sayi2").value;
+        if(s2==0)
+        alert("Gecersiz islem")
+        else
+        sonuc.value=parseInt(s1)/parseInt(s2);
+        }
+        
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

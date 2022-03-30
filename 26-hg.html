@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input  type="text"  id="indirimorani">
+    <button onclick="uygula()" id="sonhal">Uygula</button>
+
+<ul >
+    <li>Notebook <span id="indirim1" value="-">1500</span>$</li>
+    <li>Monitor <span id="indirim">1200</span>$</li>
+    <li>Klavye <span id="indirim">250</span>$</li>
+    <li>Mause <span id="indirim">20</span>$</li>
+</ul>
+
+<script>
+
+function uygula() {
+
+    girilen = parseInt (document.getElementById("#indirimorani").value);
+         mal= parseInt (document.getElementById("#indirim1").value);
+   sonhal.value =parseInt(girilen)-parseInt(mal);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
