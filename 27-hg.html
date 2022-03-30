@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        
+        }
+        #sayi{
+          border-radius: 3px;
+      
+        }
+        #tahmin, #baslat{
+            background-color:black;
+            color:white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text"  id="sayi" placeholder="Lutfen bir sayi giriniz">
+    <input type="button" id="tahmin" onclick="tahmin1()" value="Tahmin Et" disabled>
+    <input type="button" id="baslat" onclick="baslat1()" value="Oyunu Baslat"><br>
+  
+
+    <script>
+    
+        var baslat=document.querySelector("#baslat");
+        var tahmin=document.querySelector("#tahmin");
+        
+        
+        function baslat1()
+        {
+            tahmin.disabled=false;
+            rsayi=Math.round(Math.random()*100);
+            sayac=0;
+            
+        }
+        function tahmin1()
+        {
+            sayac++;
+            
+            if(rsayi==sayi.value)
+            {
+                window.alert("😊Tebrikler dogru tahmin✨⭐");
+            }
+            else if(sayi.value>rsayi)
+            {
+                window.alert("Daha küçük bir sayi girmeyi deneyin..");
+            }
+            else
+            {
+                window.alert("Daha büyük bir sayi girmeyi deneyin..");
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
